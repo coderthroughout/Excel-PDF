@@ -1,0 +1,26 @@
+name = "bank-statement-converter"
+type = "webpack"
+account_id = "your_account_id"
+workers_dev = true
+route = ""
+zone_id = ""
+compatibility_date = "2023-05-18"
+
+main = "src/index.js"
+
+[build.upload]
+format = "service-worker"
+
+[build]
+command = "npm install && npm run build"
+
+[vars]
+ENVIRONMENT = "production"
+
+[[kv_namespaces]]
+binding = "USERS"
+id = "362000f6079f4a53b3bdfd065db7fbe6"
+
+[vectorize]
+binding = "VECTORIZE_INDEX"
+index_name = "bank_statements"
